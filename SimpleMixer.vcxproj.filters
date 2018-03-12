@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Maximilian">
+      <UniqueIdentifier>{0994812f-f9e6-453e-9ebf-4fe7881e4552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AudioEngine">
+      <UniqueIdentifier>{bfb22ee3-4616-41f4-b5d0-c8cc515fcbdc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleMixer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\fft.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\maxiAtoms.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\maxiBark.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\maxiFFT.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\maxiGrains.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\maxim.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\maxiMFCC.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\libs\sineTable.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\maximilian.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\portaudio.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\RtAudio.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\RtError.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\maximilian\stb_vorbis.h">
+      <Filter>Maximilian</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\IAudioEngine.h">
+      <Filter>AudioEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\IAudioRenderer.h">
+      <Filter>AudioEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\MaxiAudioEngine.h">
+      <Filter>AudioEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\WasapiRenderer.h">
+      <Filter>AudioEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SimpleMixer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\libs\fft.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\libs\maxiAtoms.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\libs\maxiBark.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\libs\maxiFFT.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\libs\maxiGrains.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\libs\maxiMFCC.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\maximilian.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\RtAudio.cpp">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\maximilian\stb_vorbis.c">
+      <Filter>Maximilian</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\MaxiAudioEngine.cpp">
+      <Filter>AudioEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\WasapiRenderer.cpp">
+      <Filter>AudioEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SimpleMixer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SimpleMixer.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
