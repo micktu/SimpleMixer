@@ -160,7 +160,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AudioEngine\BaseAudioEngine.h" />
-    <ClInclude Include="AudioEngine\IAudioEngine.h" />
     <ClInclude Include="AudioEngine\IAudioRenderer.h" />
     <ClInclude Include="AudioEngine\MaxiAudioEngine.h" />
     <ClInclude Include="AudioEngine\Tracks\AudioTrack.h" />

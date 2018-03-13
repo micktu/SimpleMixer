@@ -41,7 +41,7 @@ bool BaseAudioEngine::Update()
 	double** tempBuffers = new double *[_tracks.size()];
 	for (size_t i = 0; i < _tracks.size(); i++)
 	{
-		tempBuffers[i] = new double[numSamples];
+		tempBuffers[i] = new double[numSamples] { 0 };
 	}
 
 	// Assuming tracks are sorted in order of processing

@@ -96,9 +96,6 @@
     <ClInclude Include="Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AudioEngine\IAudioEngine.h">
-      <Filter>AudioEngine</Filter>
-    </ClInclude>
     <ClInclude Include="AudioEngine\Tracks\AudioTrack.h">
       <Filter>AudioEngine\Tracks</Filter>
     </ClInclude>
