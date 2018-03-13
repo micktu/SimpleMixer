@@ -1,6 +1,5 @@
 #pragma once
 
-#include "common.h"
 #include "IAudioRenderer.h"
 
 template <class TEngine, class TRenderer>

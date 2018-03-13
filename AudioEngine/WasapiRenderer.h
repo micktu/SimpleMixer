@@ -21,27 +21,29 @@ private:
 
 	IMMDeviceEnumerator *_enumerator = NULL;
 	IMMDevice *_device = NULL;
+	LPWSTR _newDeviceId = new WCHAR[100];
+	LPWSTR _lastDeviceId = new WCHAR[100];
+
 	IAudioClient *_audioClient = NULL;
 	IAudioRenderClient *_renderClient = NULL;
 	WAVEFORMATEX *_pwfx = NULL;
 
-	REFERENCE_TIME _requestedDuration = REFTIMES_PER_SEC;
+	REFERENCE_TIME _requestedDuration = REFTIMES_PER_SEC / 10;
 	REFERENCE_TIME _actualDuration;
 
 	UINT32 _bufferFrameCount;
 	BYTE *_data;
 
+
 public:
 	WasapiRenderer();
 	~WasapiRenderer();
 
-	bool Init(IAudioEngine *engine) override;
-	bool Render() override;
+	bool Init(BaseAudioEngine *engine) override;
 	bool GetFormat(WORD &numChannels, DWORD &sampleRate, WORD &bitsPerSample) override;
 	bool GetBuffer(BYTE *&buffer, UINT32 &length) override;
 	bool ReleaseBuffer(UINT32 numFrames, DWORD flags) override;
 
-private:
-	HRESULT _fillBuffer(UINT32 numFrames, DWORD &flags);
-
+	bool ActivateClient();
+	void ReleaseClient();
 };

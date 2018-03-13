@@ -1,18 +1,17 @@
 #pragma once
 
-#include "IAudioEngine.h"
-#include "maximilian.h"
+#include "BaseAudioEngine.h"
 
-class MaxiAudioEngine :	public IAudioEngine
+
+class MaxiAudioEngine :	public BaseAudioEngine
 {
 private:
-	maxiOsc _sine;
+	class SineGenerator *gen;
 
 public:
 	MaxiAudioEngine();
 	~MaxiAudioEngine();
 
 	bool Init(class IAudioRenderer *renderer) override;
-	bool Update() override;
 };
 

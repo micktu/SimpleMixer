@@ -35,20 +35,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -72,16 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>.;AudioEngine;vendor\maximilian;$(IncludePath)</IncludePath>
+    <IncludePath>.;AudioEngine;AudioEngine\Tracks;vendor\maximilian;$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.;AudioEngine;AudioEngine\Tracks;vendor\maximilian;$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>.;AudioEngine;AudioEngine\Tracks;vendor\maximilian;$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>.;AudioEngine;AudioEngine\Tracks;vendor\maximilian;$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -95,10 +98,13 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)Assets &amp; xcopy /y /e $(ProjectDir)Assets $(OutDir)Assets</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -108,10 +114,13 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)Assets &amp; xcopy /y /e $(ProjectDir)Assets $(OutDir)Assets</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -125,10 +134,13 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)Assets &amp; xcopy /y /e $(ProjectDir)Assets $(OutDir)Assets</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -142,16 +154,29 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)Assets &amp; xcopy /y /e $(ProjectDir)Assets $(OutDir)Assets</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AudioEngine\BaseAudioEngine.h" />
     <ClInclude Include="AudioEngine\IAudioEngine.h" />
     <ClInclude Include="AudioEngine\IAudioRenderer.h" />
     <ClInclude Include="AudioEngine\MaxiAudioEngine.h" />
+    <ClInclude Include="AudioEngine\Tracks\AudioTrack.h" />
+    <ClInclude Include="AudioEngine\Tracks\CompressorTrack.h" />
+    <ClInclude Include="AudioEngine\Tracks\DelayTrack.h" />
+    <ClInclude Include="AudioEngine\Tracks\LowpassTrack.h" />
+    <ClInclude Include="AudioEngine\Tracks\SamplePlayer.h" />
+    <ClInclude Include="AudioEngine\Tracks\SineGenerator.h" />
     <ClInclude Include="AudioEngine\WasapiRenderer.h" />
+    <ClInclude Include="AudioTrackDialog.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SamplePlayer.h" />
     <ClInclude Include="SimpleMixer.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Utils.h" />
     <ClInclude Include="vendor\maximilian\libs\fft.h" />
     <ClInclude Include="vendor\maximilian\libs\maxiAtoms.h" />
     <ClInclude Include="vendor\maximilian\libs\maxiBark.h" />
@@ -167,9 +192,13 @@
     <ClInclude Include="vendor\maximilian\stb_vorbis.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AudioEngine\BaseAudioEngine.cpp" />
     <ClCompile Include="AudioEngine\MaxiAudioEngine.cpp" />
+    <ClCompile Include="AudioEngine\Tracks\AudioTrack.cpp" />
     <ClCompile Include="AudioEngine\WasapiRenderer.cpp" />
+    <ClCompile Include="AudioTrackDialog.cpp" />
     <ClCompile Include="SimpleMixer.cpp" />
+    <ClCompile Include="Utils.cpp" />
     <ClCompile Include="vendor\maximilian\libs\fft.cpp" />
     <ClCompile Include="vendor\maximilian\libs\maxiAtoms.cpp" />
     <ClCompile Include="vendor\maximilian\libs\maxiBark.cpp" />

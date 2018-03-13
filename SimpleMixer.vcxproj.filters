@@ -19,6 +19,9 @@
     <Filter Include="AudioEngine">
       <UniqueIdentifier>{bfb22ee3-4616-41f4-b5d0-c8cc515fcbdc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AudioEngine\Tracks">
+      <UniqueIdentifier>{c41cc05a-75f7-4d67-b14a-1b4093217ed1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -69,9 +72,6 @@
     <ClInclude Include="vendor\maximilian\stb_vorbis.h">
       <Filter>Maximilian</Filter>
     </ClInclude>
-    <ClInclude Include="AudioEngine\IAudioEngine.h">
-      <Filter>AudioEngine</Filter>
-    </ClInclude>
     <ClInclude Include="AudioEngine\IAudioRenderer.h">
       <Filter>AudioEngine</Filter>
     </ClInclude>
@@ -83,6 +83,39 @@
     </ClInclude>
     <ClInclude Include="common.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\BaseAudioEngine.h">
+      <Filter>AudioEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioTrackDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplePlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\IAudioEngine.h">
+      <Filter>AudioEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Tracks\AudioTrack.h">
+      <Filter>AudioEngine\Tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Tracks\CompressorTrack.h">
+      <Filter>AudioEngine\Tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Tracks\DelayTrack.h">
+      <Filter>AudioEngine\Tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Tracks\LowpassTrack.h">
+      <Filter>AudioEngine\Tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Tracks\SamplePlayer.h">
+      <Filter>AudioEngine\Tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioEngine\Tracks\SineGenerator.h">
+      <Filter>AudioEngine\Tracks</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +154,18 @@
     </ClCompile>
     <ClCompile Include="AudioEngine\WasapiRenderer.cpp">
       <Filter>AudioEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioTrackDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\BaseAudioEngine.cpp">
+      <Filter>AudioEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioEngine\Tracks\AudioTrack.cpp">
+      <Filter>AudioEngine\Tracks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
